@@ -153,23 +153,18 @@
       // pls don't forget to change to your domain :)
       injectSvgSprite('https://bootstraptemple.com/files/icons/orion-svg-sprite.svg'); 
       
-      function GetURLParameter(sParam)
-{
-    var sPageURL = window.location.search.substring(1);
-    var sURLVariables = sPageURL.split('&');
-    for (var i = 0; i < sURLVariables.length; i++) 
-    {
-        var sParameterName = sURLVariables[i].split('=');
-        if (sParameterName[0] == sParam) 
-        {
-            return sParameterName[1];
-        }
-    }
-  return ""
-}
-      var tech = GetURLParameter('pro');
-   var output = document.getElementById('buttonbuy');
+
+    const queryString = window.location.search;
+
+   const urlParams = new URLSearchParams(queryString);
+      
+      var tech = urlParams.get('pro')
+      
+      if (tech !== undefined || tech !== null){
+  var output = document.getElementById('buttonbuy');
          output.innerHTML = tech;
+}
+      
    
       
       ​
