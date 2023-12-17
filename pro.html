@@ -135,10 +135,8 @@
   const urlParams = new URLSearchParams(queryString);
       
      var tech = urlParams.get('status')  
-      if (tech !== undefined || tech !== null){
-        document.getElementById("buy").innerHTML = tech
- 
-}
+      if(tech=="true") document.getElementById("buy").innerHTML = "You already bought Pro!"
+
     </script>
     <script>
 
