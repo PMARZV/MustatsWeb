@@ -135,7 +135,11 @@
   const urlParams = new URLSearchParams(queryString);
       
      var tech = urlParams.get('status')  
-      if(tech=="true") document.getElementById("buy").innerHTML = "You already bought Pro!"
+      if(tech=="true"){
+	      document.getElementById("buy").innerHTML = "You already bought Pro!";
+	      document.getElementById("buy").removeAttribute("href")
+		      }
+		       
 
     </script>
     <script>
