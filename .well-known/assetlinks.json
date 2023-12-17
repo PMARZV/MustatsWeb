@@ -1,9 +1,11 @@
-[{
-  "relation": ["delegate_permission/common.handle_all_urls"],
-  "target": {
-    "namespace": "android_app",
-    "package_name": "andr.mobile.mustats",
-    "sha256_cert_fingerprints":
-    ["95:3C:7D:D0:30:EF:17:8D:6F:12:7F:F5:E7:48:29:5B:BC:D8:95:1F:39:D1:60:12:E8:F0:25:66:5B:6F:D9:7A"]
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "andr.mobile.mustats",
+      "sha256_cert_fingerprints":
+        ["82:EF:B8:54:78:97:C6:1A:50:61:76:0B:43:0F:90:61:63:F6:AA:72:86:D8:3E:BA:D9:E1:EE:28:BB:C3:3D:8F"]
+    }
   }
-}]
+]
