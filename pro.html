@@ -55,7 +55,7 @@
             <h1>Buy Mustats Pro Cheaper than The App</h1>
             <p class="my-4 text-muted">See all your Music Top Stats & get Song Recommendations from your Spotify Account</p>
             <ul class="list-inline mb-0">
-              <li class="list-inline-item mb-2 mb-lg-0"><a class="btn btn-primary btn-lg px-4" target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=andr.mobile.mustats"> <i class="fab fa-google-play me-3"></i>Google Play</a></li>
+              <li class="list-inline-item mb-2 mb-lg-0"><a class="btn btn-primary btn-lg px-4" target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=andr.mobile.mustats" id="buttonbuy">Buy Pro</a></li>
              <!-- <li class="list-inline-item"><a class="btn btn-primary btn-lg px-4" href="#!"> <i class="fab fa-app-store me-3"></i>App Store</a></li> -->
             </ul>
           </div>
@@ -153,6 +153,26 @@
       // pls don't forget to change to your domain :)
       injectSvgSprite('https://bootstraptemple.com/files/icons/orion-svg-sprite.svg'); 
       
+      function GetURLParameter(sParam)
+{
+    var sPageURL = window.location.search.substring(1);
+    var sURLVariables = sPageURL.split('&');
+    for (var i = 0; i < sURLVariables.length; i++) 
+    {
+        var sParameterName = sURLVariables[i].split('=');
+        if (sParameterName[0] == sParam) 
+        {
+            return sParameterName[1];
+        }
+    }
+  return ""
+}
+      var tech = GetURLParameter('pro');
+   var output = document.getElementById('buttonbuy');
+         output.innerHTML = tech;
+   
+      
+      ​
     </script>
     <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
