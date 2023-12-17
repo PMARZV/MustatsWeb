@@ -129,15 +129,20 @@
     <script src="vendor/swiper/swiper-bundle.min.js"></script>
     <script src="vendor/modal-video/js/modal-video.js"></script>
     <script src="js/front.js"></script>
+     <script>
+
+		 const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+      
+     var tech = urlParams.get('status')  
+      if (tech !== undefined || tech !== null){
+        document.getElementById("buy").innerHTML = tech
+ 
+}
+    </script>
     <script>
 
     
-       const queryString = window.location.search;
-
-   const urlParams = new URLSearchParams(queryString);
-    document.getElementById("buy").innerHTML = urlParams.get('status')
- 
-
       // ------------------------------------------------------- //
       //   Inject SVG Sprite - 
       //   see more here 
