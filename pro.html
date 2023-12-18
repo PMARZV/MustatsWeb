@@ -72,11 +72,14 @@
   const urlParams = new URLSearchParams(queryString);
       
      var tech = urlParams.get('status')  
+	 var dev = urlParams.get('device')  
       if(tech=="true"){
 	      document.getElementById("buy").innerHTML = "You already bought Pro!";
 	      document.getElementById("buy").removeAttribute("href")
 		      }
-		       
+	if(dev=="notallowed"){
+	     alert("You need to have and Android device with the app installed to buy Pro Version")
+		      }	       
 
     </script>
     <script>
